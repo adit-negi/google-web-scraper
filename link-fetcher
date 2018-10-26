@@ -10,7 +10,6 @@ for link in  soup.find_all("a",href=re.compile("(?<=/url\?q=)(htt.*://.*)")):
     #converting into a string
     link_str = re.split(":(?=http)",link["href"].replace("/url?q=",""))[0]    
     if not link_str.startswith("http://webcache"):
-        
         time.sleep(wt)
         print(link_str)
         
